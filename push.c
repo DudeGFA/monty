@@ -29,7 +29,7 @@ void add_dnodeint(stack_t **head, unsigned int line_no)
         no_int_arg_err(line_no);
 	}
 	printf("before atoi\n");
-    new_arg = atoi(stripped_line + 4);
+    new_arg = atoi(stripped_line[4]);
 	printf("after atoi\n");
 	printf("%d", new_arg);
 	printf("new_arg check");
