@@ -12,7 +12,7 @@ void no_int_arg_err(unsigned int line_no)
     exit(EXIT_FAILURE);
 }
 
-void add_dnodeint(stack_t **head, unsigned int line_no)
+void add_dnodeint(stack_t **head, unsigned int line_no __attribute__((unused)))
 {
 	stack_t *new_head_node;
 
