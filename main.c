@@ -1,5 +1,5 @@
-#include "monty.h"
 #define  _POSIX_C_SOURCE 200809L
+#include "monty.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

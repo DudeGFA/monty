@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "monty.h": "c",
-        "TEST.C": "cpp"
+        "TEST.C": "cpp",
+        "stddef.h": "c"
     }
 }
