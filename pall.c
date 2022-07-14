@@ -8,7 +8,7 @@
 size_t print_dlistint(stack_t **_stack, unsigned int line_no)
 {
 	int i = 0;
-    stack_t *h = *_stack
+    stack_t *h = *_stack;
 	while (h != NULL)
 	{
 		printf("%d\n", (*h).n);

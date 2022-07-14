@@ -3,10 +3,10 @@
 #include <stdlib.h>
 int _arg;
 char *stripped_line;
-void not_file(char * file_name)
+void not_file(char *file_name)
 {
-        fprintf(stderr, "Error: Can't open file %s", file_name);
-        exit(EXIT_FAILURE);
+    fprintf(stderr, "Error: Can't open file %s", file_name);
+    exit(EXIT_FAILURE);
 }
 void usage()
 {

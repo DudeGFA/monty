@@ -37,7 +37,7 @@ typedef struct instruction_s
 char *remove_whitespace(char *str);
 int substring(char * a, char * b);
 int _strlen(char *stri);
-bool digit_check(char key[]);
+int digit_check(char *key);
 stack_t *add_dnodeint(stack_t **head, unsigned int line_no);
 size_t print_dlistint(stack_t **_stack, unsigned int line_no);
 extern int _arg;
