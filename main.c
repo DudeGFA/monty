@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 {
     FILE *file;
     unsigned int i, line_no = 1;
-    unsigned int MAX_LINE_LENGTH = 1024;
+    size_t MAX_LINE_LENGTH = 1024;
     char *line;
     stack_t *_stack;
     instruction_t struct_array[] = {{"push", add_dnodeint}, {"pall", print_dlistint}};
@@ -48,5 +48,6 @@ int main(int argc, char *argv[])
         }
         line_no++;
     }
+    fclose(file);
     return (0);
 }
