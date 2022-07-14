@@ -1,14 +1,35 @@
 #include <stdio.h>
-#include "monty.h"
-char *remove_whitespace(char *str)  
+#include <string.h>
+#include <stdlib.h>
+int _strlen(char *stri)
 {
-    for(i = 0; str[i]; i++)
+    int i;
+
+    for (i = 0; stri[i]; i++)
     {
-        if (str[i] == ' ' || str[i] == '\t' || sr[i] == '\n')
+    }
+    return (i);
+}
+char *remove_whitespace(char *old_str)  
+{
+    unsigned int i, j = 0;
+    char *new_str = malloc(_strlen(old_str) + 1);
+    if (new_str == NULL)
+        return NULL;
+    for(i = 0; old_str[i]; i++)
+    {
+        if (old_str[i] != ' ' && old_str[i] != '\t' && old_str[i] != '\n')
         {
-            str[i] = str[i + 1];
-            i++;
+            new_str[j] = old_str[i];
+            j++;
         }
     }
-    return str;
+    return new_str;
+}
+int main()
+{
+    char *d = "d ";
+    d = remove_whitespace(d);
+    printf("%s\n", d);
+    return 0;
 }
