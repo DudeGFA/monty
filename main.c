@@ -1,6 +1,7 @@
 #include "monty.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 int _arg;
 char *stripped_line;
 void not_file(char *file_name)
