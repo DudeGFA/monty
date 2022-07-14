@@ -15,7 +15,7 @@ void no_int_arg_err(unsigned int line_no)
 void add_dnodeint(stack_t **head, unsigned int line_no)
 {
 	stack_t *new_head_node;
-	int new_arg;
+	int new_arg = 1;
 
 	printf("%s first check\n", stripped_line);
     if (_strlen(stripped_line) < 5)
@@ -31,7 +31,7 @@ void add_dnodeint(stack_t **head, unsigned int line_no)
 	printf("before atoi\n");
     sscanf(stripped_line + 4, "%d", &new_arg);
 	printf("after atoi\n");
-	printf("%d", new_arg);
+	/*printf("%d", new_arg);*/
 	printf("new_arg check");
 	new_head_node = malloc(sizeof(stack_t));
 	if (new_head_node == NULL)
