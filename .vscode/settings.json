@@ -2,6 +2,7 @@
     "files.associations": {
         "monty.h": "c",
         "TEST.C": "cpp",
-        "stddef.h": "c"
+        "stddef.h": "c",
+        "stdarg.h": "c"
     }
 }
