@@ -39,7 +39,7 @@ char *remove_whitespace(char *str);
 int substring(char * a, char * b);
 int _strlen(char *stri);
 void add_dnodeint(stack_t **head, unsigned int line_no);
-void print_dlistint(stack_t **_stack, unsigned int line_no);
+void print_stack(stack_t **_stack, unsigned int line_no);
 extern int _arg;
 extern char *stripped_line;
 #endif /* main.h */

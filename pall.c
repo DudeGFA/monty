@@ -5,12 +5,19 @@
  * @h: pointer to head of doubly liked list
  * Return: size_t
  */
-void print_dlistint(stack_t **_stack, unsigned int line_no __attribute__((unused)))
+size_t print_dlistint(const stack_t *h)
 {
-    stack_t *h = *_stack;
+	size_t i = 0;
+
 	while (h != NULL)
 	{
-		printf("%d\n", (*h).n);
+		printf("%d\n", h->n);
 		h = h->next;
+		i++;
 	}
+	return (i);
+}
+void print_stack(stack_t **_stack, unsigned int line_no __attribute__((unused)))
+{
+    print_dlistint(*_stack);
 }

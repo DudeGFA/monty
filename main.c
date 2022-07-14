@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
     size_t buf_len = 0;
     char *line = NULL;
     stack_t *_stack;
-    instruction_t struct_array[] = {{"push", add_dnodeint}, {"pall", print_dlistint}};
+    instruction_t struct_array[] = {{"push", add_dnodeint}, {"pall", print_stack}};
 
     if (argc != 2)
         usage();
