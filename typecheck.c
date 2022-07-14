@@ -1,4 +1,3 @@
-#include "monty.h"
 
 int digit_check(char key)
 {
@@ -10,6 +9,6 @@ int digit_check(char key)
         {
             return 0;
         }
-    }
+
     return 1;
 }
