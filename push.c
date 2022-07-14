@@ -12,7 +12,7 @@ void no_int_arg_err(unsigned int line_no)
     exit(EXIT_FAILURE);
 }
 
-stack_t *add_dnodeint(stack_t **head, unsigned int line_no)
+void *add_dnodeint(stack_t **head, unsigned int line_no)
 {
 	stack_t *new_head_node;
 
@@ -34,5 +34,4 @@ stack_t *add_dnodeint(stack_t **head, unsigned int line_no)
 	if ((*head) != NULL)
 		(*head)->prev = new_head_node;
 	*head = new_head_node;
-	return (new_head_node);
 }

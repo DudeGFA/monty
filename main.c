@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
     unsigned int MAX_LINE_LENGTH = 1024;
     char *line;
     stack_t *_stack;
-    instruction_t struct_array[] = {{"push", stack_t *add_dnodeint(stack_t **head, unsigned int line_no)}, {"pall", size_t print_dlistint(stack_t **_stack, unsigned int line_no)}};
+    instruction_t struct_array[] = {{"push", void add_dnodeint(stack_t **head, unsigned int line_no)}, {"pall", void print_dlistint(stack_t **_stack, unsigned int line_no)}};
 
     if (argc != 2)
         usage();
