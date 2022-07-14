@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 {
     FILE *file;
     unsigned int i, line_no = 1;
-    size_t MAX_LINE_LENGTH = 1024;
+    size_t buf_len = 0;
     char *line;
     stack_t *_stack;
     instruction_t struct_array[] = {{"push", add_dnodeint}, {"pall", print_dlistint}};
@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
     file = fopen(argv[1], "r");
     if (!file)
         not_file(argv[1]);
-    while ((getline(&line, &MAX_LINE_LENGTH, file)) != (-1))
+    while ((getline(&line, &buf_len, file)) != (-1))
     {
         stripped_line = remove_whitespace(line);
         for(i = 0; i < 2; i++)
