@@ -22,11 +22,11 @@ void add_dnodeint(stack_t **head, unsigned int line_no)
         no_int_arg_err(line_no);
 	}
 	printf("%c second check\n", stripped_line[4]);
-    if (!isdigit(stripped_line[4]))
+    /*if (!isdigit(stripped_line[4]))
 	{
         no_int_arg_err(line_no);
-	}
-	printf("before atoi");
+	}*/
+	printf("before atoi\n");
     _arg = atoi(&(stripped_line[4]));
 	printf("%d", _arg);
 	new_head_node = malloc(sizeof(stack_t));
