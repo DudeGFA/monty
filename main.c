@@ -29,10 +29,14 @@ int main(int argc, char *argv[])
     instruction_t struct_array[] = {{"push", add_dnodeint}, {"pall", print_stack}};
 
     if (argc != 2)
+    {
         usage();
+    }
     file = fopen(argv[1], "r");
     if (!file)
+    {
         not_file(argv[1]);
+    }
     while ((getline(&line, &buf_len, file)) >= 0)
     {
         stripped_line = remove_whitespace(line);
@@ -44,7 +48,9 @@ int main(int argc, char *argv[])
                 break;
             }
             else if (i == 1)
+            {
                 invalid_instruction(line_no, line);
+            }
         }
         line_no++;
     }
