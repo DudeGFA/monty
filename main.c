@@ -25,13 +25,13 @@ int main(int argc, char *argv[])
     unsigned int MAX_LINE_LENGTH = 1024;
     char *line;
     stack_t *_stack;
-    instruction_t struct_array[] = {{"push", void add_dnodeint(stack_t **head, unsigned int line_no)}, {"pall", void print_dlistint(stack_t **_stack, unsigned int line_no)}};
+    instruction_t struct_array[] = {{"push", add_dnodeint}, {"pall", print_dlistint}};
 
     if (argc != 2)
         usage();
     file = fopen(argv[1], "r");
     if (!file)
-        not_file(char *argv[1]);
+        not_file(argv[1]);
     while (getline(&line, &MAX_LINE_LENGTH, file) != (-1))
     {
         stripped_line = remove_whitespace(line);
