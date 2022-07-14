@@ -5,7 +5,7 @@
  * @h: pointer to head of doubly liked list
  * Return: size_t
  */
-size_t print_dlistint(stack_t **_stack, unsigned int line_no)
+size_t print_dlistint(stack_t **_stack, unsigned int line_no __attribute__((unused)))
 {
 	int i = 0;
     stack_t *h = *_stack;
