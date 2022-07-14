@@ -16,17 +16,17 @@ void add_dnodeint(stack_t **head, unsigned int line_no)
 {
 	stack_t *new_head_node;
 
-	printf("%s first check\n", stripped_line);
+	/*printf("%s first check\n", stripped_line);
     if (_strlen(stripped_line) < 5)
 	{
         no_int_arg_err(line_no);
 	}
 	printf("%c second check\n", stripped_line[4]);
-    /*if (!isdigit(stripped_line[4]))
+    if (!isdigit(stripped_line[4]))
 	{
         no_int_arg_err(line_no);
-	}*/
-	printf("before atoi\n");
+	}
+	printf("before atoi\n");*/
     _arg = atoi(&(stripped_line[4]));
 	printf("%d", _arg);
 	new_head_node = malloc(sizeof(stack_t));
