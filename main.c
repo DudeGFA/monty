@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
     file = fopen(argv[1], "r");
     if (!file)
         not_file(argv[1]);
-    while (getline(&line, &MAX_LINE_LENGTH, file) != (-1))
+    while ((getline(&line, &MAX_LINE_LENGTH, file)) != (-1))
     {
         stripped_line = remove_whitespace(line);
         for(i = 0; i < 2; i++)
