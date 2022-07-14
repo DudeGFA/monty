@@ -3,6 +3,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <unistd.h>>
+#include <stdarg.h>
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -33,5 +35,10 @@ typedef struct instruction_s
 } instruction_t;
 char *remove_whitespace(char *str);
 int substring(char * a, char * b);
+int _strlen(char *stri);
+bool digit_check(char key[]);
+stack_t *add_dnodeint(stack_t **head, unsigned int line_no);
+size_t print_dlistint(stack_t **_stack, unsigned int line_no);
 extern int _arg;
+extern char *stripped_line;
 #endif /* main.h */

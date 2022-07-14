@@ -1,4 +1,4 @@
-#include "main.h"
+#include "monty.h"
 int substring(char * a, char * b)
 {
     int i;

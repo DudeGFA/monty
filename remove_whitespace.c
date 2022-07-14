@@ -1,6 +1,4 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
+#include "monty.h"
 int _strlen(char *stri)
 {
     int i;
@@ -25,11 +23,4 @@ char *remove_whitespace(char *old_str)
         }
     }
     return new_str;
-}
-int main()
-{
-    char *d = "d ";
-    d = remove_whitespace(d);
-    printf("%s\n", d);
-    return 0;
 }
