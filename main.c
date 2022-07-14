@@ -1,10 +1,12 @@
 #include "monty.h"
+#include <stdio.h>
+#include <stdlib.h>
 int _arg;
 char *stripped_line;
 void not_file(char * file_name)
 {
         fprintf(stderr, "Error: Can't open file %s", file_name);
-        return EXIT_FAILURE;
+        exit(EXIT_FAILURE);
 }
 void usage()
 {
@@ -22,14 +24,14 @@ int main(int argc, char *argv[])
     unsigned int i, line_no = 1;
     unsigned int MAX_LINE_LENGTH = 1024;
     char *line;
-    instruction_t struct_array[]{{"push", stack_t *add_dnodeint(stack_t **head, unsigned int line_no)}, {"pall", size_t print_dlistint(stack_t **_stack, unsigned int line_no)}};
     stack_t *_stack;
+    instruction_t struct_array[] = {{"push", stack_t *add_dnodeint(stack_t **head, unsigned int line_no)}, {"pall", size_t print_dlistint(stack_t **_stack, unsigned int line_no)}};
 
     if (argc != 2)
         usage();
     file = fopen(argv[1], "r");
     if (!file)
-        not_file();
+        not_file(char *argv[1]);
     while (getline(&line, &MAX_LINE_LENGTH, file) != (-1))
     {
         stripped_line = remove_whitespace(line);

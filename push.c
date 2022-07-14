@@ -19,7 +19,7 @@ stack_t *add_dnodeint(stack_t **head, unsigned int line_no)
     if (_strlen(stripped_line) < 5)
         no_int_arg_err();
     if (!digit_check(stripped_line[4]))
-        no_int_arg_err();
+        no_int_arg_err(line_no);
     _arg = atoi(stripped_line[4]);
 
 	new_head_node = malloc(sizeof(stack_t));
@@ -28,7 +28,7 @@ stack_t *add_dnodeint(stack_t **head, unsigned int line_no)
 		fprintf(stderr, "Error: malloc failed");
         exit (EXIT_FAILURE);
     }
-	new_head_node->n = n;
+	new_head_node->n = _arg;
 	new_head_node->prev = NULL;
 	new_head_node->next = *head;
 	if ((*head) != NULL)
