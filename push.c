@@ -18,6 +18,7 @@ void add_dnodeint(stack_t **head, unsigned int line_no)
 
     if (_strlen(stripped_line) < 5)
         no_int_arg_err(line_no);
+	printf("%c", stripped_line[4]);
     if (!digit_check(&(stripped_line[4])))
         no_int_arg_err(line_no);
     _arg = atoi(&(stripped_line[4]));
