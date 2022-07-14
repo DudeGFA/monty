@@ -41,6 +41,7 @@ int main(int argc, char *argv[])
             if (substring(stripped_line, struct_array[i].opcode))
             {
                 struct_array[i].f(&_stack, line_no);
+                break;
             }
             else if (i == 1)
                 invalid_instruction(line_no, line);
