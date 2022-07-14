@@ -5,9 +5,9 @@
  * @h: pointer to head of doubly liked list
  * Return: size_t
  */
-size_t print_dlistint(const stack_t *h)
+int print_dlistint(const stack_t *h)
 {
-	size_t i = 0;
+	int i = 0;
 
 	while (h != NULL)
 	{

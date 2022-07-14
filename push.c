@@ -43,4 +43,5 @@ void add_dnodeint(stack_t **head, unsigned int line_no)
 		(*head)->prev = new_head_node;
 	}
 	*head = new_head_node;
+	printf("ok");
 }
