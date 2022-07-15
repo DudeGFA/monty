@@ -21,6 +21,7 @@ void add_dnodeint(stack_t **head, unsigned int line_no)
 	{
         no_int_arg_err(line_no);
 	}
+	printf("pass _strlen");
     if (!isdigit(stripped_line[5]))
 	{
         no_int_arg_err(line_no);
