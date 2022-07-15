@@ -1,4 +1,3 @@
-#define  _POSIX_C_SOURCE 200809L
 #include "monty.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -23,7 +22,7 @@ int main(int argc, char *argv[])
 {
     FILE *file;
     unsigned int i, line_no = 1;
-    size_t buf_len = 0;
+    int buf_len = 1024;
     char *line = NULL;
     stack_t *_stack;
     instruction_t struct_array[] = {{"push", add_dnodeint}, {"pall", print_stack}};
@@ -37,7 +36,7 @@ int main(int argc, char *argv[])
     {
         not_file(argv[1]);
     }
-    while ((getline(&line, &buf_len, file)) >= 0)
+    while (fgets(line, buf_len, file))
     {
         stripped_line = remove_whitespace(line);
         printf("stripped line1: %s", stripped_line);
