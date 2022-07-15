@@ -16,8 +16,9 @@ void add_dnodeint(stack_t **head, unsigned int line_no)
 {
 	stack_t *new_head_node;
 	int new_arg = 1;
-
-    if (_strlen(stripped_line) < 5)
+	
+	printf("stripped_line: %s\n", stripped_line);
+    if (strlen(stripped_line) < 5)
 	{
         no_int_arg_err(line_no);
 	}
