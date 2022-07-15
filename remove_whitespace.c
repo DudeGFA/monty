@@ -11,7 +11,7 @@ int _strlen(char *stri)
 char *remove_whitespace(char *old_str)  
 {
     unsigned int i, j = 0;
-    char new_str[] = old_str;
+    char new_str[10] = old_str;
     char *p = new_str;
 
     for(i = 0; old_str[i]; i++)
