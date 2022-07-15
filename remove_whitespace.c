@@ -11,7 +11,7 @@ int _strlen(char *stri)
 char *remove_whitespace(char *old_str)  
 {
     unsigned int i, j = 0;
-    char new_str[7];
+    char new_str[6];
     char *p;
     printf("oldstr: %s\n", old_str);
     for(i = 0; old_str[i]; i++)
@@ -25,7 +25,7 @@ char *remove_whitespace(char *old_str)
         {
             break;
         }
-        new_str[6] = '\0';
+        new_str[5] = '\0';
     }
 
     printf("new_str: %s\n", new_str);
