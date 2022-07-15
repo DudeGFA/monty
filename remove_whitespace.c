@@ -21,10 +21,6 @@ char *remove_whitespace(char *old_str)
             new_str[j] = old_str[i];
             j++;
         }
-        if (j == 5)
-        {
-            break;
-        }
     }
     p = new_str;
     return p;
