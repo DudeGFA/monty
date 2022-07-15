@@ -22,8 +22,8 @@ int main(int argc, char *argv[])
 {
     FILE *file;
     unsigned int i, line_no = 1;
-    int buf_len = 6;
-    char *line = NULL;
+    int buf_len = 7;
+    char line[50];
     stack_t *_stack;
     instruction_t struct_array[] = {{"push", add_dnodeint}, {"pall", print_stack}};
     if (argc != 2)
@@ -37,9 +37,9 @@ int main(int argc, char *argv[])
     }
     while (fgets(line, buf_len, file) != NULL)
     {
-        printf("start");
+        /*printf("%s\n", line);*/
         stripped_line = remove_whitespace(line);
-        printf("stripped line1: %s", stripped_line);
+        /*printf("stripped line1: %s", stripped_line);*/
         for(i = 0; i < 2; i++)
         {
             if (substring(stripped_line, struct_array[i].opcode))
@@ -54,7 +54,6 @@ int main(int argc, char *argv[])
         }
         line_no++;
     }
-    free(line);
     fclose(file);
     return (0);
 }

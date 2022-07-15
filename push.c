@@ -17,7 +17,7 @@ void add_dnodeint(stack_t **head, unsigned int line_no)
 	stack_t *new_head_node;
 	int new_arg = 1;
 	
-	printf("stripped_line: %s\n", stripped_line);
+	/*printf("stripped_line: %s\n", stripped_line);*/
     if (strlen(stripped_line) < 5)
 	{
         no_int_arg_err(line_no);
@@ -28,9 +28,9 @@ void add_dnodeint(stack_t **head, unsigned int line_no)
         no_int_arg_err(line_no);
 	}
     new_arg = atoi(&(stripped_line[5]));
-	/*printf("after atoi\n");*/
+	/*printf("after atoi\n");
 	printf("%d\n", new_arg);
-	printf("new_arg check");
+	printf("new_arg check");*/
 	new_head_node = malloc(sizeof(stack_t));
 	if (new_head_node == NULL)
     {
@@ -45,5 +45,4 @@ void add_dnodeint(stack_t **head, unsigned int line_no)
 		(*head)->prev = new_head_node;
 	}
 	*head = new_head_node;
-	printf("ok");
 }
