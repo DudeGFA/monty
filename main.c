@@ -40,6 +40,7 @@ int main(int argc, char *argv[])
     while ((getline(&line, &buf_len, file)) >= 0)
     {
         stripped_line = remove_whitespace(line);
+        printf("stripped_line: %s\n", stripped_line);
         for(i = 0; i < 2; i++)
         {
             if (substring(stripped_line, struct_array[i].opcode))
