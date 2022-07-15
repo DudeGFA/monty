@@ -21,8 +21,8 @@ char *remove_whitespace(char *old_str)
             new_str[j] = old_str[i];
             j++;
         }
-
     }
+    printf("new_str: %s\n", new_str);
     p = new_str;
     return p;
 }
