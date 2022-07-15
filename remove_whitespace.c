@@ -14,14 +14,18 @@ char *remove_whitespace(char *old_str)
     char new_str[7];
     char *p;
 
-    for(i = 0; old_str[i], j < 6; i++)
+    for(i = 0; old_str[i]; i++)
     {
         if (old_str[i] != ' ' && old_str[i] != '\t' && old_str[i] != '\n')
         {
             new_str[j] = old_str[i];
             j++;
         }
+        if (j == 5)
+        {
+            break;
+        }
     }
-    p = &new_str;
+    p = new_str;
     return p;
 }
